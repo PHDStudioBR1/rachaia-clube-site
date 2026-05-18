@@ -1,0 +1,131 @@
+{
+  "generatedAt": "2026-05-18T19:57:13.880Z",
+  "summary": {
+    "totalPages": 6,
+    "totalImages": 113,
+    "totalVideos": 1,
+    "totalPdfs": 0,
+    "emptyPages": []
+  },
+  "perPage": [
+    {
+      "slug": "home",
+      "imageCount": 24,
+      "videoCount": 0,
+      "pdfCount": 0,
+      "textLength": 1412,
+      "isEmpty": false
+    },
+    {
+      "slug": "sobre",
+      "imageCount": 36,
+      "videoCount": 0,
+      "pdfCount": 0,
+      "textLength": 868,
+      "isEmpty": false
+    },
+    {
+      "slug": "eventos",
+      "imageCount": 5,
+      "videoCount": 0,
+      "pdfCount": 0,
+      "textLength": 592,
+      "isEmpty": false
+    },
+    {
+      "slug": "publicacoes",
+      "imageCount": 0,
+      "videoCount": 0,
+      "pdfCount": 0,
+      "textLength": 89,
+      "isEmpty": false
+    },
+    {
+      "slug": "aluguel-de-espaco",
+      "imageCount": 45,
+      "videoCount": 0,
+      "pdfCount": 0,
+      "textLength": 391,
+      "isEmpty": false
+    },
+    {
+      "slug": "contato",
+      "imageCount": 3,
+      "videoCount": 1,
+      "pdfCount": 0,
+      "textLength": 694,
+      "isEmpty": false
+    }
+  ],
+  "imageOrganization": [
+    {
+      "slug": "aluguel-de-espaco",
+      "removedEmpty": 0,
+      "removedDuplicates": 1,
+      "removedInvalidExt": 0,
+      "renamed": 45,
+      "finalCount": 45
+    },
+    {
+      "slug": "contato",
+      "removedEmpty": 0,
+      "removedDuplicates": 0,
+      "removedInvalidExt": 0,
+      "renamed": 3,
+      "finalCount": 3
+    },
+    {
+      "slug": "eventos",
+      "removedEmpty": 0,
+      "removedDuplicates": 0,
+      "removedInvalidExt": 0,
+      "renamed": 5,
+      "finalCount": 5
+    },
+    {
+      "slug": "home",
+      "removedEmpty": 0,
+      "removedDuplicates": 12,
+      "removedInvalidExt": 0,
+      "renamed": 24,
+      "finalCount": 24
+    },
+    {
+      "slug": "publicacoes",
+      "removedEmpty": 0,
+      "removedDuplicates": 0,
+      "removedInvalidExt": 0,
+      "renamed": 0,
+      "finalCount": 0
+    },
+    {
+      "slug": "sobre",
+      "removedEmpty": 0,
+      "removedDuplicates": 1,
+      "removedInvalidExt": 0,
+      "renamed": 36,
+      "finalCount": 36
+    }
+  ],
+  "brokenAssets": [],
+  "warnings": [
+    {
+      "slug": "publicacoes",
+      "issue": "Página retornou erro 404 no Wix"
+    },
+    {
+      "slug": "publicacoes",
+      "issue": "Texto muito curto após limpeza"
+    }
+  ],
+  "errors": [
+    {
+      "slug": "publicacoes",
+      "issue": "Página retornou erro 404 no Wix"
+    },
+    {
+      "slug": "publicacoes",
+      "issue": "Texto muito curto após limpeza"
+    }
+  ]
+}

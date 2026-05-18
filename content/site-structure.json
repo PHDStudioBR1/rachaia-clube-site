@@ -1,0 +1,52 @@
+{
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Rachaia Clube do Brasil | Eventos, Festas, Aluguel de espeços",
+      "url": "https://www.rachaiaclube.com.br/",
+      "hasImages": true,
+      "hasVideos": false,
+      "hasPDFs": false
+    },
+    {
+      "slug": "sobre",
+      "title": "HISTÓRIA | Rachaia Clube",
+      "url": "https://www.rachaiaclube.com.br/sobre",
+      "hasImages": true,
+      "hasVideos": false,
+      "hasPDFs": false
+    },
+    {
+      "slug": "eventos",
+      "title": "EVENTOS | Rachaia Clube",
+      "url": "https://www.rachaiaclube.com.br/eventos",
+      "hasImages": true,
+      "hasVideos": false,
+      "hasPDFs": false
+    },
+    {
+      "slug": "publicacoes",
+      "title": "404 Erro: página não encontrada",
+      "url": "https://www.rachaiaclube.com.br/publicacoes",
+      "hasImages": false,
+      "hasVideos": false,
+      "hasPDFs": false
+    },
+    {
+      "slug": "aluguel-de-espaco",
+      "title": "ALUGUEL DE ESPAÇO | Rachaia Clube",
+      "url": "https://www.rachaiaclube.com.br/alguel-de-espa%C3%A7o",
+      "hasImages": true,
+      "hasVideos": false,
+      "hasPDFs": false
+    },
+    {
+      "slug": "contato",
+      "title": "CONTATO | Rachaia Clube",
+      "url": "https://www.rachaiaclube.com.br/contato",
+      "hasImages": true,
+      "hasVideos": true,
+      "hasPDFs": false
+    }
+  ]
+}

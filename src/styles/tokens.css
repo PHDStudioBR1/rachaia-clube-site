@@ -1,0 +1,151 @@
+:root {
+  /* ─── Paleta definitiva ─── */
+  --warm-white: #faf8f5;
+  --ivory: #f5f1ea;
+  --sand: #e8e0d4;
+  --sand-muted: #d9cfc0;
+  --bronze: #9a7b5c;
+  --bronze-light: #b8956a;
+  --copper: #8b6f52;
+  --navy: #1a2332;
+  --navy-muted: #2a3547;
+  --charcoal: #2c2926;
+  --charcoal-soft: #4a4541;
+  --stone: #6b635a;
+  --stone-muted: #8a8379;
+  --linen: #f0ebe3;
+
+  /* Semânticas */
+  --background: var(--warm-white);
+  --background-subtle: var(--ivory);
+  --background-muted: var(--linen);
+  --foreground: var(--charcoal);
+  --foreground-soft: var(--charcoal-soft);
+  --muted: var(--stone);
+  --muted-foreground: var(--stone-muted);
+  --border: var(--sand);
+  --border-subtle: color-mix(in srgb, var(--sand) 60%, var(--warm-white));
+  --accent: var(--bronze);
+  --accent-hover: var(--copper);
+  --accent-foreground: var(--warm-white);
+  --accent-secondary: var(--navy);
+  --accent-secondary-foreground: var(--ivory);
+  --surface: var(--warm-white);
+  --surface-elevated: var(--ivory);
+  --surface-inset: var(--linen);
+  --overlay-light: rgba(250, 248, 245, 0.92);
+  --overlay-dark: rgba(26, 35, 50, 0.55);
+  --overlay-cinematic: linear-gradient(
+    180deg,
+    rgba(26, 35, 50, 0.15) 0%,
+    rgba(26, 35, 50, 0.45) 55%,
+    rgba(26, 35, 50, 0.72) 100%
+  );
+  --ring: color-mix(in srgb, var(--bronze) 40%, transparent);
+
+  /* ─── Tipografia ─── */
+  --font-serif: "Cormorant Garamond", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.1875rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.25rem;
+  --text-4xl: 3rem;
+  --text-5xl: 3.75rem;
+  --text-6xl: 4.5rem;
+  --text-display: clamp(2.5rem, 5vw + 1rem, 4.75rem);
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.65;
+  --leading-relaxed: 1.8;
+
+  --tracking-tighter: -0.02em;
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+  --tracking-wider: 0.12em;
+  --tracking-widest: 0.2em;
+
+  /* ─── Espaçamento editorial ─── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-28: 7rem;
+  --space-32: 8rem;
+  --space-40: 10rem;
+
+  --section-sm: var(--space-16);
+  --section-md: var(--space-24);
+  --section-lg: var(--space-32);
+  --section-xl: var(--space-40);
+
+  /* ─── Radius ─── */
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+
+  /* ─── Sombras sutis ─── */
+  --shadow-xs: 0 1px 2px rgba(44, 41, 38, 0.04);
+  --shadow-sm: 0 2px 8px rgba(44, 41, 38, 0.06);
+  --shadow-md: 0 4px 20px rgba(44, 41, 38, 0.08);
+  --shadow-lg: 0 8px 40px rgba(44, 41, 38, 0.1);
+  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  /* ─── Layout ─── */
+  --container-max: 76rem;
+  --container-narrow: 42rem;
+  --container-prose: 38rem;
+  --container-wide: 88rem;
+  --container-padding: 1.25rem;
+  --gutter: var(--space-6);
+  --header-height: 5rem;
+
+  /* ─── Motion cinematográfico ─── */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
+  --transition-fast: 180ms var(--ease-in-out);
+  --transition-base: 380ms var(--ease-out-expo);
+  --transition-slow: 600ms var(--ease-out-expo);
+  --transition-cinematic: 900ms var(--ease-out-expo);
+
+  /* ─── Navbar ─── */
+  --navbar-blur: 16px;
+  --navbar-bg-transparent: transparent;
+  --navbar-bg-scrolled: color-mix(in srgb, var(--warm-white) 88%, transparent);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --container-padding: 2rem;
+    --gutter: var(--space-8);
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --container-padding: 2.75rem;
+    --gutter: var(--space-10);
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --container-padding: 3rem;
+  }
+}
