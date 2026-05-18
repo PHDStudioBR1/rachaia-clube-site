@@ -1,0 +1,6 @@
+export { HomeArchive } from './HomeArchive'
+export { HomeClosing } from './HomeClosing'
+export { HomeHero } from './HomeHero'
+export { HomeHighlights } from './HomeHighlights'
+export { HomeIntro } from './HomeIntro'
+export { HomeSpaces } from './HomeSpaces'

@@ -1,13 +1,21 @@
-import { Container } from '@/components/ui/Container'
-import { usePageContent } from '@/hooks/usePageContent'
-import { PageContentSection } from '@/sections/PageContentSection'
+import {
+  HomeArchive,
+  HomeClosing,
+  HomeHero,
+  HomeHighlights,
+  HomeIntro,
+  HomeSpaces,
+} from '@/sections/home'
 
 export function HomePage() {
-  const content = usePageContent('home')
-
   return (
-    <Container as="article">
-      <PageContentSection content={content} heading="Início" />
-    </Container>
+    <article>
+      <HomeHero />
+      <HomeIntro />
+      <HomeArchive />
+      <HomeHighlights />
+      <HomeSpaces />
+      <HomeClosing />
+    </article>
   )
 }

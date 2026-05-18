@@ -61,6 +61,7 @@ function isDecorativeImage(url) {
   if (url.startsWith('data:image/svg')) return true
   if (url.startsWith('data:image/png;base64,iVBORw0KGgo')) return true
   if (url.includes('/w_25,h_25,') || url.includes('/w_53,h_59,')) return true
+  if (/Logo%20|logo|favicon|Whatsapp_edited/i.test(url)) return true
   return false
 }
 

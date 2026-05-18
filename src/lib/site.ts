@@ -8,6 +8,8 @@ export const SITE_CONTACT: SiteContact = {
   phones: ['(11) 5549-7904', '(11) 94925-3855'],
 }
 
+export const SITE_EMAIL = 'contato@rachaiaclube.com.br'
+
 export const NAV_ITEMS = [
   { label: 'Início', href: '/', slug: 'home' as const },
   { label: 'História', href: '/sobre', slug: 'sobre' as const },

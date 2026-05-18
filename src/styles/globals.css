@@ -190,3 +190,32 @@ h6 {
 .hero-overlay {
   background: var(--overlay-cinematic);
 }
+
+.hero-overlay--soft {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--navy) 28%, transparent) 0%,
+    color-mix(in srgb, var(--navy) 8%, transparent) 45%,
+    color-mix(in srgb, var(--navy) 42%, transparent) 100%
+  );
+}
+
+@keyframes slowZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+.animate-slow-zoom {
+  animation: slowZoom 22s var(--ease-out-expo) forwards;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-slow-zoom {
+    animation: none;
+  }
+}

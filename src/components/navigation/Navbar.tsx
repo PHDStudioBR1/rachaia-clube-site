@@ -2,10 +2,11 @@ import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import { BrandLogo } from '@/components/brand/BrandLogo'
 import { Container } from '@/components/ui/Container'
 import { useScrollState } from '@/hooks/useScrollState'
 import { fadeIn, motionTransition } from '@/lib/motion'
-import { NAV_ITEMS, SITE_NAME, SITE_TAGLINE } from '@/lib/site'
+import { NAV_ITEMS } from '@/lib/site'
 import { cn } from '@/lib/utils'
 
 export function Navbar() {
@@ -23,27 +24,26 @@ export function Navbar() {
           : 'border-b border-transparent bg-[var(--navbar-bg-transparent)]',
       )}
     >
-      <Container as="nav" className="flex h-[var(--header-height)] items-center justify-between gap-8">
+      <Container
+        as="nav"
+        className="flex min-h-[var(--header-height)] items-center justify-between gap-5 py-3.5 md:gap-10 md:py-4 lg:gap-14"
+      >
         <Link
           to="/"
-          className="group flex flex-col leading-none"
+          className="group relative z-10 inline-flex shrink-0 items-center self-center py-0.5 pr-3 transition-opacity duration-[var(--transition-base)] hover:opacity-[0.88] md:pr-8 lg:pr-10"
           onClick={closeMobile}
+          aria-label="Rachaia Clube — Início"
         >
-          <span className="font-serif text-xl tracking-[var(--tracking-tight)] text-foreground transition-[color,opacity] duration-[var(--transition-base)] group-hover:text-accent md:text-2xl">
-            {SITE_NAME}
-          </span>
-          <span className="mt-1 font-sans text-[0.625rem] uppercase tracking-[var(--tracking-widest)] text-muted-foreground">
-            {SITE_TAGLINE}
-          </span>
+          <BrandLogo variant="horizontal" context="nav" priority />
         </Link>
 
-        <ul className="hidden items-center gap-10 lg:flex">
+        <ul className="hidden items-center gap-8 xl:gap-10 lg:flex">
           {NAV_ITEMS.map((item) => (
             <li key={item.href}>
               <NavLink
                 to={item.href}
                 end={item.href === '/'}
-                className="group relative block py-1"
+                className="group relative block py-2"
               >
                 {({ isActive }) => (
                   <>
@@ -60,7 +60,9 @@ export function Navbar() {
                     <span
                       className={cn(
                         'absolute -bottom-0.5 left-0 h-px bg-bronze transition-all duration-[var(--transition-base)]',
-                        isActive ? 'w-full opacity-100' : 'w-0 opacity-0 group-hover:w-full group-hover:opacity-60',
+                        isActive
+                          ? 'w-full opacity-100'
+                          : 'w-0 opacity-0 group-hover:w-full group-hover:opacity-60',
                       )}
                       aria-hidden
                     />
@@ -73,13 +75,17 @@ export function Navbar() {
 
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-border bg-surface/80 text-foreground shadow-[var(--shadow-xs)] transition-[background-color,border-color,box-shadow] duration-[var(--transition-base)] hover:border-bronze/30 hover:bg-ivory lg:hidden"
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center self-center rounded-sm border border-border bg-surface/80 text-foreground shadow-[var(--shadow-xs)] transition-[background-color,border-color] duration-[var(--transition-base)] hover:border-bronze/30 hover:bg-ivory lg:hidden"
           aria-expanded={isMobileOpen}
           aria-controls="mobile-menu"
           aria-label={isMobileOpen ? 'Fechar menu' : 'Abrir menu'}
           onClick={() => setIsMobileOpen((open) => !open)}
         >
-          {isMobileOpen ? <X size={20} strokeWidth={1.25} /> : <Menu size={20} strokeWidth={1.25} />}
+          {isMobileOpen ? (
+            <X size={20} strokeWidth={1.25} />
+          ) : (
+            <Menu size={20} strokeWidth={1.25} />
+          )}
         </button>
       </Container>
 
@@ -93,7 +99,15 @@ export function Navbar() {
             transition={motionTransition.base}
             className="overflow-hidden border-t border-border-subtle bg-[var(--navbar-bg-scrolled)] backdrop-blur-[var(--navbar-blur)] lg:hidden"
           >
-            <Container className="py-6">
+            <Container className="py-8">
+              <motion.div
+                className="mb-8 flex justify-center border-b border-border-subtle pb-8"
+                variants={fadeIn}
+                initial="hidden"
+                animate="visible"
+              >
+                <BrandLogo variant="horizontal" context="navMobile" priority />
+              </motion.div>
               <motion.ul
                 variants={fadeIn}
                 initial="hidden"
@@ -108,7 +122,7 @@ export function Navbar() {
                       onClick={closeMobile}
                       className={({ isActive }) =>
                         cn(
-                          'block rounded-sm px-4 py-3 font-sans text-sm tracking-[var(--tracking-wide)] transition-colors duration-[var(--transition-base)]',
+                          'block rounded-sm px-4 py-3.5 font-sans text-sm tracking-[var(--tracking-wide)] transition-colors duration-[var(--transition-base)]',
                           isActive
                             ? 'bg-ivory text-foreground'
                             : 'text-muted hover:bg-ivory/60 hover:text-foreground',

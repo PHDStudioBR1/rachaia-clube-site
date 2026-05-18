@@ -114,7 +114,7 @@
   --container-wide: 88rem;
   --container-padding: 1.25rem;
   --gutter: var(--space-6);
-  --header-height: 5rem;
+  --header-height: 6.5rem;
 
   /* ─── Motion cinematográfico ─── */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
